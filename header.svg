@@ -3,9 +3,15 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         @keyframes snowfall {
-          0% { transform: translateY(-80px); opacity: 0; }
+          0% {
+            transform: translate(-20px, -80px);
+            opacity: 0;
+          }
           15% { opacity: 1; }
-          100% { transform: translateY(440px); opacity: 0.25; }
+          100% {
+            transform: translate(20px, 440px);
+            opacity: 0.25;
+          }
         }
 
         .container {
@@ -16,69 +22,74 @@
           overflow: hidden;
           font-family: 'Courier New', monospace;
         }
-
+        
         .center {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          color: #ffffff;
-          font-size: 42px;
-          font-weight: bold;
-          text-shadow: 0 0 12px #58a6ff;
-          z-index: 5;
-          pointer-events: none;
-          white-space: nowrap;
-          font-size: clamp(10px, 3vw, 30px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        font-size: 42px;
+        font-weight: bold;
+        text-shadow: 0 0 12px #58a6ff;
+        z-index: 5;
+        pointer-events: none;
+        white-space: nowrap;
+        font-size: clamp(10px, 3vw, 30px);
 
-        }
+      }
+
 
         .flake {
           position: absolute;
-          top: -60px;
+          top: -80px;
           opacity: 0;
           animation: snowfall linear infinite;
           white-space: nowrap;
-          z-index: 1;
         }
 
-        .stm { color: #3fb950; }
-        .ros { color: #58a6ff; }
-        .asm { color: #d2a8ff; }
         .lin { color: #f2cc60; }
-        .ai  { color: #ffa657; }
+        .cpp { color: #58a6ff; }
+        .py  { color: #ffa657; }
+        .cs  { color: #3fb950; }
+        .ai  { color: #d2a8ff; }
+        .sql { color: #e5533d; }
 
-        .f1  { left: 6%;  animation-duration: 7s;  animation-delay: 0s;  font-size: 14px;}
-        .f2  { left: 14%; animation-duration: 9s;  animation-delay: 2s;  font-size: 18px;}
-        .f3  { left: 22%; animation-duration: 6s;  animation-delay: 1s;  font-size: 15px;}
-        .f4  { left: 30%; animation-duration: 8s;  animation-delay: 3s;  font-size: 16px;}
-        .f5  { left: 38%; animation-duration: 10s; animation-delay: 0.5s;font-size: 14px;}
-        .f6  { left: 46%; animation-duration: 7.5s;animation-delay: 2.5s;font-size: 17px;}
-        .f7  { left: 54%; animation-duration: 9s;  animation-delay: 1.5s;font-size: 15px;}
-        .f8  { left: 62%; animation-duration: 6.5s;animation-delay: 3.5s;font-size: 16px;}
-        .f9  { left: 70%; animation-duration: 8.5s;animation-delay: 1s;  font-size: 14px;}
-        .f10 { left: 78%; animation-duration: 11s; animation-delay: 2s;  font-size: 18px;}
-        .f11 { left: 86%; animation-duration: 7s;  animation-delay: 4s;  font-size: 15px;}
+        .f1  { left: 5%;  animation-duration: 7s;  animation-delay: 0s; }
+        .f2  { left: 12%; animation-duration: 9s;  animation-delay: 2s; }
+        .f3  { left: 20%; animation-duration: 6s;  animation-delay: 1s; }
+        .f4  { left: 28%; animation-duration: 10s; animation-delay: 3s; }
+        .f5  { left: 36%; animation-duration: 8s;  animation-delay: 1.5s; }
+        .f6  { left: 44%; animation-duration: 7.5s;animation-delay: 2.5s; }
+        .f7  { left: 52%; animation-duration: 9s;  animation-delay: 0.5s; }
+        .f8  { left: 60%; animation-duration: 6.5s;animation-delay: 3.5s; }
+        .f9  { left: 68%; animation-duration: 11s; animation-delay: 1s; }
+        .f10 { left: 76%; animation-duration: 8.5s;animation-delay: 2s; }
+        .f11 { left: 84%; animation-duration: 7s;  animation-delay: 4s; }
       </style>
 
       <div class="container">
         <div class="center">System is being updated to 2026...</div>
 
-        <div class="flake f1 stm">RCC->AHB1ENR</div>
-        <div class="flake f2 stm">HAL_UART_Transmit</div>
-        <div class="flake f3 stm">USART2_IRQHandler</div>
+        <div class="flake f1 lin">segmentation fault</div>
+        <div class="flake f2 lin">/dev/video0</div>
 
-        <div class="flake f4 ros">rclcpp::spin</div>
-        <div class="flake f5 ros">sensor_msgs/msg/Image</div>
-        <div class="flake f6 ros">/tf_static</div>
+        <div class="flake f3 cpp">std::vector&lt;int&gt;</div>
+        <div class="flake f4 cpp">undefined reference</div>
 
-        <div class="flake f7 asm">MOV R0, #1</div>
-        <div class="flake f8 asm">STR R1, [R2]</div>
+        <div class="flake f5 py">import numpy as np</div>
+        <div class="flake f6 py">y = np.dot(w, x)</div>
 
-        <div class="flake f9 lin">/proc/cpuinfo</div>
-        <div class="flake f10 lin">systemctl restart</div>
+        <div class="flake f7 cs">Bitmap bmp = new()</div>
+        <div class="flake f8 cs">bmp.GetPixel(x,y)</div>
 
-        <div class="flake f11 ai">neural network</div>
+        <div class="flake f9 ai">sum += w[i]*x[i]</div>
+        <div class="flake f10 ai">output = sum &gt; 0</div>
+
+        <div class="flake f11 ai">h = abs(x1-x2)+abs(y1-y2)</div>
+
+        <div class="flake f2 sql">SELECT * FROM users</div>
+        <div class="flake f6 sql">WHERE id = :p1</div>
       </div>
     </div>
   </foreignObject>
