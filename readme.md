@@ -2,15 +2,15 @@
   <img src="https://github.com/yufurkan/yufurkan/blob/main/header.svg?raw=true" width="100%" alt="System Upgrade Animation">
 </div>
 
----
+<br>
 
 <div align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=yufurkan&theme=tokyonight" alt="Profile Details" height="180" />
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=yufurkan&theme=tokyonight" alt="Stats" height="180" />
 </div>
 
----
 
+<br>
 
 
 <div align="center">
@@ -64,7 +64,7 @@
 
 </div>
 
----
+
  <br>
 
 <p align="center">
