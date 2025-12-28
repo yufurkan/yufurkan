@@ -133,8 +133,9 @@
           <div class="sub-text">Loading 2026 Kernel | v.2.0.26</div>
         </div>
 	
-	/* --- Bunun hikayesi biraz içler acısı --- */
+	<!-- Bunun hikayesi biraz içler acısı -->
         <div class="flake pos-L1 c-orange">feat: integrated circuit emitting smoke?</div>
+
         <div class="flake pos-L2 c-red">git push --force (I deleted commit history)</div>
         <div class="flake pos-L3 c-purp">EXCEPTION WHEN OTHERS THEN NULL;</div>
         <div class="flake pos-L4 c-red">undefined behavior ahead</div>
