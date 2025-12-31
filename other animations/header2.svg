@@ -1,0 +1,208 @@
+<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        /* --- ANİMASYONLAR (Arka Plan) --- */
+        @keyframes drift-right { 0% { transform: translate(0, -60px); opacity: 0; } 10% { opacity: 1; } 100% { transform: translate(40px, 460px); opacity: 0.4; } }
+        @keyframes drift-left { 0% { transform: translate(0, -60px); opacity: 0; } 10% { opacity: 1; } 100% { transform: translate(-40px, 460px); opacity: 0.4; } }
+        @keyframes drift-sway { 0% { transform: translate(0, -60px); opacity: 0; } 25% { transform: translate(20px, 100px); opacity: 1; } 50% { transform: translate(-15px, 250px); opacity: 1; } 75% { transform: translate(10px, 350px); opacity: 0.8; } 100% { transform: translate(-5px, 460px); opacity: 0.4; } }
+        
+        /* --- DAKTİLO EFEKTİ --- */
+        @keyframes typing {
+          from { width: 0 }
+          to { width: 100% }
+        }
+        @keyframes blink-caret {
+          from, to { border-color: transparent }
+          50% { border-color: #ffd700 } /* Cursor Rengi */
+        }
+
+        /* --- DEĞİŞEN YAZI EFEKTİ --- */
+        @keyframes rotate-text {
+          0%, 20% { opacity: 0; transform: translateY(10px); }
+          25%, 45% { opacity: 1; transform: translateY(0); }
+          50%, 100% { opacity: 0; transform: translateY(-10px); }
+        }
+
+        @keyframes pulse-green {
+          0%, 100% { text-shadow: 0 0 10px #50fa7b, 0 0 20px #50fa7b; opacity: 1; }
+          50% { text-shadow: 0 0 5px #50fa7b; opacity: 0.8; }
+        }
+
+        .container {
+          background-color: #0b0c10;
+          width: 100%;
+          height: 400px;
+          position: relative;
+          overflow: hidden;
+          font-family: 'Consolas', 'Monaco', monospace;
+        }
+
+        .center-box {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 50;
+          text-align: center;
+          background: rgba(11, 12, 16, 0.95); 
+          padding: 30px;
+          border-radius: 12px;
+          border: 1px solid #1f2833;
+          box-shadow: 0 0 60px rgba(80, 250, 123, 0.15); /* Yeşil Glow */
+          min-width: 350px;
+        }
+
+        .status-text {
+          color: #50fa7b; /* Yeşil (Success) */
+          font-size: 14px;
+          font-weight: bold;
+          letter-spacing: 2px;
+          margin-bottom: 15px;
+          text-transform: uppercase;
+          animation: pulse-green 3s infinite;
+        }
+
+        /* İSİM (DAKTİLO) */
+        .typewriter-container {
+          display: inline-block;
+        }
+        .main-name {
+          color: #f8f8f2;
+          font-size: 26px;
+          font-weight: bold;
+          overflow: hidden;
+          border-right: 3px solid #ffd700;
+          white-space: nowrap;
+          margin: 0 auto;
+          letter-spacing: 1px;
+          animation: 
+            typing 3.5s steps(30, end),
+            blink-caret .75s step-end infinite;
+          max-width: fit-content;
+        }
+
+        /* ALTTA DEĞİŞEN YAZILAR */
+        .rotating-text-wrapper {
+          position: relative;
+          height: 20px;
+          margin-top: 15px;
+          width: 100%;
+        }
+        
+        .rotator {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          text-align: center;
+          font-size: 14px;
+          color: #8be9fd; /* Cyan */
+          opacity: 0;
+        }
+
+        /* 3 Farklı mesajı sırayla döndür */
+        .rotator:nth-child(1) { animation: rotate-text 9s linear infinite; animation-delay: 0s; }
+        .rotator:nth-child(2) { animation: rotate-text 9s linear infinite; animation-delay: 3s; }
+        .rotator:nth-child(3) { animation: rotate-text 9s linear infinite; animation-delay: 6s; }
+
+        .flake { position: absolute; top: -60px; opacity: 0; white-space: nowrap; font-weight: 600; z-index: 1; }
+
+        /* --- RENKLER --- */
+        .c-gold { color: #ffd700; } .c-purp { color: #bd93f9; } .c-cyan { color: #8be9fd; } 
+        .c-red { color: #ff5555; text-shadow: 0 0 3px #ff0000; } .c-blue { color: #6272a4; } 
+        .c-lime { color: #50fa7b; } .c-white { color: #f8f8f2; } .c-pink { color: #ff79c6; } 
+        .c-orange { color: #ffb86c; } .c-gray { color: #6272a4; font-style: italic; }
+
+        /* --- POZİSYONLAR (Senin Orijinal Kodların) --- */
+        .pos-L1 { left: 1%; animation: drift-right 14s linear infinite; animation-delay: 0s; font-size: 14px; }
+        .pos-L2 { left: 5%; animation: drift-sway 16s linear infinite; animation-delay: 5s; font-size: 13px; }
+        .pos-L3 { left: 2%; animation: drift-right 12s linear infinite; animation-delay: 10s; font-size: 15px; }
+        .pos-L4 { left: -3%; animation: drift-sway 18s linear infinite; animation-delay: 15s; font-size: 14px; }
+        .pos-L5 { left: 6%; animation: drift-right 13s linear infinite; animation-delay: 20s; font-size: 15px; }
+        .pos-L6 { left: 12%; animation: drift-sway 15s linear infinite; animation-delay: 2.5s; font-size: 14px; }
+        .pos-L7 { left: 18%; animation: drift-right 17s linear infinite; animation-delay: 7.5s; font-size: 12px; }
+        .pos-L8 { left: 0%; animation: drift-sway 14s linear infinite; animation-delay: 12.5s; font-size: 14px; }
+        .pos-L9 { left: -2%; animation: drift-right 16s linear infinite; animation-delay: 18s; font-size: 13px; }
+
+        .pos-M1 { left: 30%; animation: drift-sway 12s linear infinite; animation-delay: 17.5s; font-size: 14px; }
+        .pos-M2 { left: 35%; animation: drift-right 16s linear infinite; animation-delay: 1s; font-size: 13px; }
+        .pos-M3 { left: 40%; animation: drift-left 13s linear infinite; animation-delay: 6s; font-size: 15px; }
+        .pos-M4 { left: 45%; animation: drift-sway 15s linear infinite; animation-delay: 11s; font-size: 14px; }
+        .pos-M5 { left: 50%; animation: drift-right 18s linear infinite; animation-delay: 16s; font-size: 12px; }
+        .pos-M6 { left: 55%; animation: drift-left 14s linear infinite; animation-delay: 21s; font-size: 16px; }
+        .pos-M7 { left: 60%; animation: drift-sway 13s linear infinite; animation-delay: 3s; font-size: 13px; }
+        .pos-M8 { left: 38%; animation: drift-left 15s linear infinite; animation-delay: 8s; font-size: 14px; }
+        .pos-M9 { left: 52%; animation: drift-right 14s linear infinite; animation-delay: 13s; font-size: 15px; }
+
+        .pos-R1 { left: 65%; animation: drift-left 15s linear infinite; animation-delay: 9s; font-size: 12px; }
+        .pos-R2 { left: 68%; animation: drift-left 13s linear infinite; animation-delay: 14s; font-size: 16px; }
+        .pos-R3 { left: 72%; animation: drift-sway 16s linear infinite; animation-delay: 19s; font-size: 14px; }
+        .pos-R4 { left: 75%; animation: drift-left 12s linear infinite; animation-delay: 0.5s; font-size: 13px; }
+        .pos-R5 { left: 78%; animation: drift-left 14s linear infinite; animation-delay: 5.5s; font-size: 15px; }
+        .pos-R6 { left: 80%; animation: drift-sway 17s linear infinite; animation-delay: 10.5s; font-size: 13px; }
+        .pos-R7 { left: 82%; animation: drift-left 11s linear infinite; animation-delay: 2s; font-size: 15px; }
+        .pos-R8 { left: 70%; animation: drift-left 16s linear infinite; animation-delay: 4s; font-size: 14px; }
+        .pos-R9 { left: 74%; animation: drift-sway 12s linear infinite; animation-delay: 22s; font-size: 13px; }
+
+      </style>
+
+      <div class="container">
+        
+        <div class="center-box">
+          <div class="status-text">[ SYSTEM ONLINE ]</div>
+          
+          <div class="typewriter-container">
+            <div class="main-name">Yusuf Furkan Umutlu</div>
+          </div>
+
+          <div class="rotating-text-wrapper">
+             <span class="rotator">v.2.0.26 | Kernel Loaded</span>
+             <span class="rotator">Check Pinned Repos ↓</span>
+             <span class="rotator">Open Source Contributor</span>
+          </div>
+        </div>
+        <div class="flake pos-L1 c-orange">feat: integrated circuit emitting smoke?</div>
+        <div class="flake pos-L2 c-red">git push --force (I deleted commit history)</div>
+        <div class="flake pos-L3 c-purp">EXCEPTION WHEN OTHERS THEN NULL;</div>
+        <div class="flake pos-L4 c-red">undefined behavior ahead</div>
+        <div class="flake pos-L5 c-gold">struct Neuron { float w; float b; };</div>
+        <div class="flake pos-L6 c-orange">ROLLBACK TO before_mistake;</div>
+        <div class="flake pos-L7 c-red">DELETE FROM users; -- forgot WHERE</div>
+        <div class="flake pos-L8 c-gold">int h = abs(x1-x2) + abs(y1-y2);</div>
+        <div class="flake pos-L9 c-purp">try { run(); } catch { /* shhh */ }</div>
+
+        <div class="flake pos-M1 c-cyan">Bitmap bmp = new Bitmap(w, h);</div>
+        <div class="flake pos-M2 c-blue">for(int i=0; i&lt;layers.Length; i++)</div>
+        <div class="flake pos-M3 c-gold">HAL_GPIO_TogglePin(LED_A);</div>
+        <div class="flake pos-M4 c-cyan">CUDA Error: Out of Memory</div>
+        <div class="flake pos-M5 c-gold">malloc(sizeof(Universe));</div>
+        <div class="flake pos-M6 c-red">Manual Backpropagation...</div>
+        <div class="flake pos-M7 c-gold">unsafe { byte* p = (byte*)scan0; }</div>
+        <div class="flake pos-M8 c-blue">bmp.SetPixel(x, y, Color.Red);</div>
+        <div class="flake pos-M9 c-gray">// TODO: fix before boss sees</div>
+        <div class="flake pos-M1 c-gold" style="animation-delay: 23s">struct Layer { Neuron* n; };</div>
+        <div class="flake pos-M4 c-white" style="animation-delay: 24.5s">while(!coffee_cup.IsEmpty)</div>
+        <div class="flake pos-M6 c-orange" style="animation-delay: 29s">DROP DATABASE production;</div>
+
+        <div class="flake pos-R1 c-purp">0xDEADBEEF</div>
+        <div class="flake pos-R2 c-red">catch(e){ throw e; }</div>
+        <div class="flake pos-R3 c-lime">if(works) { dont_touch(); }</div>
+        <div class="flake pos-R4 c-cyan">if(pixel.R > threshold)</div>
+        <div class="flake pos-R5 c-gold">volatile uint32_t tick;</div>
+        <div class="flake pos-R6 c-purp">#define TRUE FALSE</div>
+        <div class="flake pos-R7 c-pink">sudo rm -rf /</div>
+        <div class="flake pos-R8 c-lime">return 2026;</div>
+        <div class="flake pos-R9 c-white">double pi = 3;</div>
+        
+        <div class="flake pos-R4 c-pink" style="animation-delay: 15s">kill -9 $$</div>
+        <div class="flake pos-R1 c-pink" style="animation-delay: 21s">chmod 777 *</div>
+        <div class="flake pos-R6 c-cyan" style="animation-delay: 24s">bias += lr * error</div>
+        <div class="flake pos-R2 c-gold" style="animation-delay: 29s">gcc -Os</div>
+        <div class="flake pos-R7 c-cyan" style="animation-delay: 12s">nvidia-smi --loop=0.1</div>
+        <div class="flake pos-R3 c-pink" style="animation-delay: 7s">sudo rm -rf /life</div>
+        <div class="flake pos-R5 c-orange" style="animation-delay: 30s">' OR 1=1; --</div>
+
+      </div>
+    </div>
+  </foreignObject>
+</svg>
