@@ -89,7 +89,7 @@
           z-index: 50;
           text-align: center;
           background: rgba(11, 12, 16, 0.95); 
-          padding: 18px 35px;
+          padding: 25px 35px;
           border-radius: 12px;
           border: 1px solid #1f2833;
           box-shadow: 0 0 60px rgba(0, 232, 198, 0.2);
@@ -120,8 +120,8 @@
         .typewriter-line {
           color: #a4b0be;
           font-size: 12px;
-          margin-top: 8px;
-          padding-top: 8px;
+          margin-top: 12px;
+          padding-top: 12px;
           border-top: 1px solid #1f2833;
           height: 20px;
           position: relative;
@@ -137,23 +137,18 @@
           display: inline-block;
         }
         
-       .typewriter-text:nth-child(1) { animation: typeAndFade 55s ease-in-out infinite; animation-delay: 0s; }
-        .typewriter-text:nth-child(2) { animation: typeAndFade 55s ease-in-out infinite; animation-delay: 5s; }
-        .typewriter-text:nth-child(3) { animation: typeAndFade 55s ease-in-out infinite; animation-delay: 10s; }
-        .typewriter-text:nth-child(4) { animation: typeAndFade 55s ease-in-out infinite; animation-delay: 15s; }
-        .typewriter-text:nth-child(5) { animation: typeAndFade 55s ease-in-out infinite; animation-delay: 20s; }
-        .typewriter-text:nth-child(6) { animation: typeAndFade 55s ease-in-out infinite; animation-delay: 25s; }
-        .typewriter-text:nth-child(7) { animation: typeAndFade 55s ease-in-out infinite; animation-delay: 30s; }
-        .typewriter-text:nth-child(8) { animation: typeAndFade 55s ease-in-out infinite; animation-delay: 35s; }
-        .typewriter-text:nth-child(9) { animation: typeAndFade 55s ease-in-out infinite; animation-delay: 40s; }
-        .typewriter-text:nth-child(10) { animation: typeAndFade 55s ease-in-out infinite; animation-delay: 45s; }
-        .typewriter-text:nth-child(11) { animation: typeAndFade 55s ease-in-out infinite; animation-delay: 50s; }
+        .typewriter-text:nth-child(1) { animation: typeAndFade 30s ease-in-out infinite; animation-delay: 0s; }
+        .typewriter-text:nth-child(2) { animation: typeAndFade 30s ease-in-out infinite; animation-delay: 5s; }
+        .typewriter-text:nth-child(3) { animation: typeAndFade 30s ease-in-out infinite; animation-delay: 10s; }
+        .typewriter-text:nth-child(4) { animation: typeAndFade 30s ease-in-out infinite; animation-delay: 15s; }
+        .typewriter-text:nth-child(5) { animation: typeAndFade 30s ease-in-out infinite; animation-delay: 20s; }
+        .typewriter-text:nth-child(6) { animation: typeAndFade 30s ease-in-out infinite; animation-delay: 25s; }
         
-    @keyframes typeAndFade {
+        @keyframes typeAndFade {
           0% { opacity: 0; }
           2% { opacity: 1; }
-          9% { opacity: 1; } /* Biraz daha kısa tuttum ki üst üste binmesin */
-          11% { opacity: 0; }
+          14% { opacity: 1; }
+          16% { opacity: 0; }
           100% { opacity: 0; }
         }
 
@@ -212,21 +207,16 @@
         
         <div class="center-box">
           <div class="main-text">
-            SYSTEM UPGRADE COMPLETE
+            SYSTEM UPGRADE COMPLETE<span class="check-mark">✓</span>
           </div>
-          <div class="sub-text">Kernel Ready | v.2.0.26</div>
+          <div class="sub-text">Welcome to 2026 | Ready.</div>
           <div class="typewriter-line">
-            <div class="typewriter-text">Developed By: Yusuf Furkan Umutlu</div>
-            <div class="typewriter-text">Built with passion, debugged with anger</div>
-            <div class="typewriter-text">Status: >READY_TO_RUN >All Systems Nominal</div>
-            <div class="typewriter-text"> ./run_2026.sh</div>
-            <div class="typewriter-text">Initializing Kernel 2026...</div> 
-            <div class="typewriter-text">Congratulations, you've entered 2026 🎉</div>
-            <div class="typewriter-text">Deployment Sector: Ankara_HQ</div>
-            <div class="typewriter-text">Runtime: BARE_METAL</div>
-            <div class="typewriter-text">Latency: ZERO</div>
-            <div class="typewriter-text">Memory Leaks: DETECTED... Just kidding.</div>
-            <div class="typewriter-text">Action: Review my repos ↓</div>
+            <div class="typewriter-text">Developed by Yusuf Furkan Umutlu</div>
+            <div class="typewriter-text">github.com/yufurkan - Check my repos!</div>
+            <div class="typewriter-text">Happy New Year 2026! 🎉</div>
+            <div class="typewriter-text">May your code compile on first try ☕</div>
+            <div class="typewriter-text">Built with passion, debugged with coffee</div>
+            <div class="typewriter-text">Open Source • Keep Creating 💻</div>
           </div>
         </div>
 
