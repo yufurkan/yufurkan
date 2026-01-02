@@ -1,0 +1,180 @@
+<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        @keyframes snowfall {
+          0% { transform: translateY(-60px) translateX(0px); opacity: 0; }
+          10% { opacity: 1; }
+          100% { transform: translateY(460px) translateX(30px); opacity: 0.4; }
+        }
+        
+        @keyframes pulse {
+          0%, 100% { text-shadow: 0 0 15px #00e8c6, 0 0 30px #00e8c6; opacity: 1; }
+          50% { text-shadow: 0 0 5px #00e8c6; opacity: 0.85; }
+        }
+
+        .container {
+          background-color: #0b0c10;
+          width: 100%;
+          height: 400px;
+          position: relative;
+          overflow: hidden;
+          font-family: 'Consolas', 'Monaco', monospace;
+        }
+
+        .center-box {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 20;
+          text-align: center;
+          background: rgba(11, 12, 16, 0.94); 
+          padding: 25px;
+          border-radius: 12px;
+          border: 1px solid #1f2833;
+          box-shadow: 0 0 50px rgba(0, 232, 198, 0.15);
+        }
+
+        .main-text {
+          color: #66fcf1;
+          font-size: 28px;
+          font-weight: bold;
+          animation: pulse 3s infinite;
+          white-space: nowrap;
+          letter-spacing: 1.5px;
+        }
+
+        .sub-text {
+          color: #c5c6c7;
+          font-size: 14px;
+          margin-top: 8px;
+        }
+
+        .flake {
+          position: absolute;
+          top: -60px;
+          opacity: 0;
+          animation: snowfall linear infinite;
+          white-space: nowrap;
+          font-weight: 600;
+          z-index: 1;
+        }
+
+        .c-emb  { color: #ffd700; }
+        .c-emb2 { color: #ffa500; }
+        .c-sql  { color: #ff6b6b; }
+        .c-sql2 { color: #ff9f43; }
+        .c-ai   { color: #00d2d3; }
+        .c-ai2  { color: #54a0ff; }
+        .c-sys  { color: #1dd1a1; }
+        .c-sys2 { color: #7bed9f; }
+        .c-err  { color: #ff4757; text-shadow: 0 0 2px #ff4757; }
+        .c-kwd  { color: #a29bfe; }
+        .c-str  { color: #dfe6e9; }
+
+        .f1  { left: 3%;  animation-duration: 11s; animation-delay: 0s;   font-size: 14px; }
+        .f2  { left: 8%;  animation-duration: 13s; animation-delay: 3.2s; font-size: 13px; }
+        .f3  { left: 15%; animation-duration: 9s;  animation-delay: 1.5s; font-size: 15px; }
+        .f4  { left: 22%; animation-duration: 12s; animation-delay: 5.8s; font-size: 13px; }
+        .f5  { left: 28%; animation-duration: 10s; animation-delay: 0.8s; font-size: 15px; }
+        
+        .f6  { left: 35%; animation-duration: 14s; animation-delay: 4.5s; font-size: 14px; }
+        .f7  { left: 42%; animation-duration: 11s; animation-delay: 2.7s; font-size: 12px; }
+        .f8  { left: 48%; animation-duration: 13s; animation-delay: 7.1s; font-size: 16px; }
+        .f9  { left: 55%; animation-duration: 9s;  animation-delay: 1.2s; font-size: 14px; }
+        .f10 { left: 62%; animation-duration: 12s; animation-delay: 8.4s; font-size: 13px; }
+        
+        .f11 { left: 68%; animation-duration: 10s; animation-delay: 2.1s; font-size: 15px; }
+        .f12 { left: 75%; animation-duration: 11s; animation-delay: 9.6s; font-size: 14px; }
+        .f13 { left: 82%; animation-duration: 14s; animation-delay: 0.3s; font-size: 12px; }
+        .f14 { left: 88%; animation-duration: 9s;  animation-delay: 5.9s; font-size: 16px; }
+        .f15 { left: 5%;  animation-duration: 13s; animation-delay: 10.2s; font-size: 14px; }
+        
+        .f16 { left: 12%; animation-duration: 11s; animation-delay: 3.6s; font-size: 12px; }
+        .f17 { left: 18%; animation-duration: 12s; animation-delay: 11.8s; font-size: 16px; }
+        .f18 { left: 25%; animation-duration: 10s; animation-delay: 6.3s; font-size: 14px; }
+        .f19 { left: 32%; animation-duration: 13s; animation-delay: 12.5s; font-size: 13px; }
+        .f20 { left: 38%; animation-duration: 9s;  animation-delay: 1.9s; font-size: 15px; }
+        
+        .f21 { left: 45%; animation-duration: 14s; animation-delay: 8.7s; font-size: 13px; }
+        .f22 { left: 52%; animation-duration: 11s; animation-delay: 0.1s; font-size: 14px; }
+        .f23 { left: 58%; animation-duration: 12s; animation-delay: 5.4s; font-size: 13px; }
+        .f24 { left: 65%; animation-duration: 10s; animation-delay: 9.8s; font-size: 15px; }
+        .f25 { left: 72%; animation-duration: 13s; animation-delay: 4.2s; font-size: 14px; }
+        
+        .f26 { left: 78%; animation-duration: 9s;  animation-delay: 7.6s; font-size: 12px; }
+        .f27 { left: 85%; animation-duration: 14s; animation-delay: 13.1s; font-size: 16px; }
+        .f28 { left: 91%; animation-duration: 11s; animation-delay: 2.4s; font-size: 14px; }
+        .f29 { left: 7%;  animation-duration: 12s; animation-delay: 6.9s; font-size: 13px; }
+        .f30 { left: 20%; animation-duration: 10s; animation-delay: 11.3s; font-size: 14px; }
+        
+        .f31 { left: 30%; animation-duration: 13s; animation-delay: 3.5s; font-size: 15px; }
+        .f32 { left: 40%; animation-duration: 9s;  animation-delay: 8.2s; font-size: 13px; }
+        .f33 { left: 50%; animation-duration: 14s; animation-delay: 13.7s; font-size: 14px; }
+        .f34 { left: 60%; animation-duration: 11s; animation-delay: 2.8s; font-size: 15px; }
+        .f35 { left: 70%; animation-duration: 12s; animation-delay: 7.4s; font-size: 15px; }
+        .f36 { left: 80%; animation-duration: 10s; animation-delay: 10.9s; font-size: 13px; }
+        .f37 { left: 10%; animation-duration: 13s; animation-delay: 1.6s; font-size: 14px; }
+        .f38 { left: 17%; animation-duration: 11s; animation-delay: 4.8s; font-size: 12px; }
+        .f39 { left: 27%; animation-duration: 9s;  animation-delay: 9.1s; font-size: 16px; }
+        .f40 { left: 37%; animation-duration: 14s; animation-delay: 0.6s; font-size: 14px; }
+
+      </style>
+
+      <div class="container">
+        
+        <div class="center-box">
+          <div class="main-text">SYSTEM UPGRADING...</div>
+          <div class="sub-text">Loading 2026 Kernel | v.2.0.26</div>
+        </div>
+
+        <div class="flake f1 c-emb">struct Neuron</div>
+        <div class="flake f5 c-emb2">0xDEADBEEF</div>
+        <div class="flake f9 c-emb">int h = abs(x)</div>
+        <div class="flake f14 c-emb2">HAL_GPIO</div>
+        <div class="flake f18 c-emb">volatile tick</div>
+        <div class="flake f23 c-emb2">double pi=3</div>
+        <div class="flake f29 c-emb">malloc()</div>
+        <div class="flake f33 c-emb2">struct Layer</div>
+
+        <div class="flake f3 c-ai">Bitmap bmp</div>
+        <div class="flake f8 c-ai2">for(int i=0)</div>
+        <div class="flake f12 c-ai">SetPixel(x,y)</div>
+        <div class="flake f17 c-ai2">bias += lr</div>
+        <div class="flake f22 c-ai">nvidia-smi</div>
+        <div class="flake f27 c-ai2">CUDA Error</div>
+        <div class="flake f31 c-ai">if(pixel.R)</div>
+
+        <div class="flake f6 c-sys">sudo rm -rf</div>
+        <div class="flake f10 c-sys2">kill -9 $$</div>
+        <div class="flake f15 c-sys">chmod 777</div>
+        <div class="flake f20 c-sys2">gcc -Os</div>
+        <div class="flake f25 c-sys">rm /life</div>
+        <div class="flake f30 c-sys2">unsafe ptr</div>
+        
+        <div class="flake f2 c-sql">ROLLBACK;</div>
+        <div class="flake f11 c-sql2">DELETE FROM</div>
+        <div class="flake f16 c-sql">' OR 1=1</div>
+        <div class="flake f21 c-sql2">EXCEPTION</div>
+        <div class="flake f35 c-sql">DROP DATABASE</div>
+
+        <div class="flake f4 c-err">throw e;</div>
+        <div class="flake f7 c-kwd">try { run() }</div>
+        <div class="flake f13 c-str">dont_touch()</div>
+        <div class="flake f19 c-err">Backprop...</div>
+        <div class="flake f24 c-str">fix before</div>
+        <div class="flake f26 c-kwd">while(!coffee)</div>
+        <div class="flake f28 c-err">smoke?</div>
+        <div class="flake f32 c-str">#define TRUE</div>
+        <div class="flake f34 c-kwd">return 2026</div>
+        <div class="flake f36 c-err">git push --force</div>
+        <div class="flake f37 c-sys">await Task</div>
+        <div class="flake f38 c-ai">tensor.shape</div>
+        <div class="flake f39 c-emb">I2C_Read()</div>
+        <div class="flake f40 c-sql2">BEGIN TRAN</div>
+
+      </div>
+    </div>
+  </foreignObject>
+</svg>
