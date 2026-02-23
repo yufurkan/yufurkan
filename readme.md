@@ -9,6 +9,7 @@
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=yufurkan&theme=tokyonight" alt="Stats" height="180" />
 </div>
 
+<img src="https://komarev.com/ghpvc/?username=yufurkan&color=blue" width="1" height="1" style="visibility:hidden;" alt="" />
 
 <br>
 

@@ -7,3 +7,5 @@
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=yufurkan&theme=tokyonight" alt="Stats" />
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=yufurkan&theme=tokyonight" alt="Productive Time" />
 </div>
+
+![Profile Views](https://komarev.com/ghpvc/?username=yufurkan&color=blue)
