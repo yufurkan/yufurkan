@@ -13,22 +13,6 @@
 
 <br>
 
-
-<div align="center">
-  <img src="https://github.com/yufurkan/yufurkan/blob/main/header.svg?raw=true" width="100%" alt="System Upgrade Animation">
-</div>
-
-<br>
-
-<div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=yufurkan&theme=tokyonight" alt="Profile Details" height="180" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=yufurkan&theme=tokyonight" alt="Stats" height="180" />
-</div>
-
-<img src="https://komarev.com/ghpvc/?username=yufurkan&color=blue" width="1" height="1" style="visibility:hidden;" alt="" />
-
-<br>
-
 <div align="center">
   <table><tr>
     <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="50" height="50"/></td>
@@ -74,19 +58,3 @@
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
 </p>
-
-
- <br>
-
-<p align="center">
-  <a href="mailto:yf.umutlu2310@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-  <a href="https://www.linkedin.com/in/yusuf-furkan-umutlu-63971b259/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="https://github.com/yufurkan">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-</p>
-
