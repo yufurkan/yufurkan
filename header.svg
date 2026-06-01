@@ -193,44 +193,44 @@
 
         <div class="flake pos-L1 c-orange">feat: integrated circuit emitting smoke?</div>
         <div class="flake pos-L2 c-red">git push --force (I deleted commit history)</div>
-        <div class="flake pos-L3 c-purp">EXCEPTION WHEN OTHERS THEN NULL;</div>
-        <div class="flake pos-L4 c-red">undefined behavior ahead</div>
-        <div class="flake pos-L5 c-gold">struct Neuron { float w; float b; };</div>
-        <div class="flake pos-L6 c-orange">ROLLBACK TO before_mistake;</div>
-        <div class="flake pos-L7 c-red">DELETE FROM users; -- forgot WHERE</div>
-        <div class="flake pos-L8 c-gold">int h = abs(x1-x2) + abs(y1-y2);</div>
+        <div class="flake pos-L3 c-purp">vTaskDelay(pdMS_TO_TICKS(COFFEE_BREAK));</div>
+        <div class="flake pos-L4 c-red">mode: OFFBOARD</div>
+        <div class="flake pos-L5 c-gold">*void</div>
+        <div class="flake pos-L6 c-orange">volatile</div>
+        <div class="flake pos-L7 c-red">while(1) { /* I have no OS */ }</div>
+        <div class="flake pos-L8 c-gold">HardFault_Handler(RIP_t system)</div>
         <div class="flake pos-L9 c-purp">try { run(); } catch { /* shhh */ }</div>
 
-        <div class="flake pos-M1 c-cyan">Bitmap bmp = new Bitmap(w, h);</div>
-        <div class="flake pos-M2 c-blue">for(int i=0; i&lt;layers.Length; i++)</div>
-        <div class="flake pos-M3 c-gold">HAL_GPIO_TogglePin(LED_A);</div>
+        <div class="flake pos-M1 c-cyan">*(__IO uint32_t *)0x40021000 = 0x01;</div>
+        <div class="flake pos-M2 c-blue">NaN</div>
+        <div class="flake pos-M3 c-gold">E0F</div>
         <div class="flake pos-M4 c-cyan">CUDA Error: Out of Memory</div>
         <div class="flake pos-M5 c-gold">malloc(sizeof(Universe));</div>
-        <div class="flake pos-M6 c-red">Manual Backpropagation...</div>
-        <div class="flake pos-M7 c-gold">unsafe { byte* p = (byte*)scan0; }</div>
-        <div class="flake pos-M8 c-blue">bmp.SetPixel(x, y, Color.Red);</div>
+        <div class="flake pos-M6 c-red">undefined behavior ahead</div>
+        <div class="flake pos-M7 c-gold">#</div>
+        <div class="flake pos-M8 c-blue">killall -9 gzserver gzclient</div>
         <div class="flake pos-M9 c-gray">// TODO: fix before boss sees</div>
-        <div class="flake pos-M1 c-cyan" style="animation-delay: 23s">struct Layer { Neuron* n; };</div>
-        <div class="flake pos-M4 c-cyan" style="animation-delay: 24.5s">while(!coffee_cup.IsEmpty)</div>
+        <div class="flake pos-M1 c-cyan" style="animation-delay: 23s">ros2 topic echo /cmd_vel // why isn't it moving?</div>
+        <div class="flake pos-M4 c-cyan" style="animation-delay: 24.5s">std::move(will_to_live);</div>
         <div class="flake pos-M6 c-red" style="animation-delay: 29s">DROP DATABASE production;</div>
 
         <div class="flake pos-R1 c-purp">0xDEADBEEF</div>
         <div class="flake pos-R2 c-red">catch(e){ throw e; }</div>
         <div class="flake pos-R3 c-lime">if(works) { dont_touch(); }</div>
-        <div class="flake pos-R4 c-cyan">if(pixel.R > threshold)</div>
+        <div class="flake pos-R4 c-cyan">rclcpp::spin(node);</div>
         <div class="flake pos-R5 c-gold">volatile uint32_t tick;</div>
         <div class="flake pos-R6 c-purp">#define TRUE FALSE</div>
         <div class="flake pos-R7 c-pink">sudo rm -rf /</div>
         <div class="flake pos-R8 c-lime">return 2026;</div>
         <div class="flake pos-R9 c-white">double pi = 3;</div>
         
-        <div class="flake pos-R4 c-cyan" style="animation-delay: 15s">kill -9 $$</div>
+        <div class="flake pos-R4 c-cyan" style="animation-delay: 15s">*</div>
         <div class="flake pos-R1 c-purp" style="animation-delay: 21s">chmod 777 *</div>
-        <div class="flake pos-R6 c-purp" style="animation-delay: 24s">bias += lr * error</div>
+        <div class="flake pos-R6 c-purp" style="animation-delay: 24s">NULL</div>
         <div class="flake pos-R2 c-red" style="animation-delay: 29s">gcc -Os</div>
         <div class="flake pos-R7 c-pink" style="animation-delay: 12s">nvidia-smi --loop=0.1</div>
         <div class="flake pos-R3 c-lime" style="animation-delay: 7s">sudo rm -rf /life</div>
-        <div class="flake pos-R5 c-gold" style="animation-delay: 30s">' OR 1=1; --</div>
+        <div class="flake pos-R5 c-gold" style="animation-delay: 30s">0xFF</div>
 
       </div>
     </div>
