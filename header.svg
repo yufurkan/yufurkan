@@ -190,7 +190,8 @@
             <div class="typewriter-text">Action: Review my repos ↓</div>
           </div>
         </div>
-        
+ 
+ 
 
         <div class="flake pos-L1 c-orange">feat: integrated circuit emitting smoke?</div>
         <div class="flake pos-L2 c-red">git push --force (I deleted commit history)</div>
@@ -201,7 +202,7 @@
         <div class="flake pos-L7 c-red">while(1) { /* I have no OS */ }</div>
         <div class="flake pos-L8 c-gold">HardFault_Handler(RIP_t system)</div>
         <div class="flake pos-L9 c-purp">try { run(); } catch { /* shhh */ }</div>
-
+ 
         <div class="flake pos-M1 c-cyan">*(__IO uint32_t *)0x40021000 = 0x01;</div>
         <div class="flake pos-M2 c-blue">NaN</div>
         <div class="flake pos-M3 c-gold">E0F</div>
